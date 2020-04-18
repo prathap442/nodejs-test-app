@@ -83,3 +83,12 @@ Finally after doing all the above things we need to build the image out of the r
 
 
 As we are exposing the container port at the port 8080 so thought of changing the container port of the image where the server is listening to also at the port 8080 .
+
+
+
+# Next we will just check on the routing patterns that exist here
+
+> Ref: [https://expressjs.com/en/guide/routing.html]
+The site provides the reference for a better routing guide
+
+
