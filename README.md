@@ -92,3 +92,7 @@ As we are exposing the container port at the port 8080 so thought of changing th
 The site provides the reference for a better routing guide
 
 
+# Static Files And the Middleware learnings
+Middleware?
+  - Something that sits between two layers of the request and the response being sent to the front end and then here the middleware helps in calculating the time taken for the request to get completed .
+

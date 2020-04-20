@@ -3,7 +3,11 @@ var app = express();
 var port = process.env.port || 3000;
 app.listen(port);
 
-app.get
+app.use('/',function(req, res, next){
+  console.log(req.params);
+  console.log("entred the Middle ware");
+  next();
+})
 
 app.get('/',function(req,res){
   res.send("<html> <head><title> The Nodejs Title </title></head> <body><h1> Hello World</h1> </body></html>");  
