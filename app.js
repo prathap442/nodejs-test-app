@@ -33,5 +33,6 @@ app.get('/books/:id',function(req,res){
 
   // POST /login gets urlencoded bodies
   app.post('/person', urlencodedParser, function (req, res) {
+      console.log(req.body);
     res.send('welcome, ' + req.body.fname)
   })

@@ -129,3 +129,11 @@ we do this
   })
 
 ```
+
+
+
+What is the REST?
+  The rest is nothing but the RepresentationStateTransform used to interact with other servers and reply to the servers based on the request being sent .
+
+REST has got a structural way of interacting even though all the CRUD operations by HTTP verbs can actually be performed but the CRUD operations need to take place by means of specific HTTP Verbs and these Verbs would be of various kinds like GET,POST,PATCH,DELETE
+
