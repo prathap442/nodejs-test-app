@@ -105,3 +105,27 @@ Now after installing the ejs now we want to set the view engine
 ```
 $ app.set('view engine','ejs')
 ```
+
+
+> Now we will have a look at the body-parser package of the npm
+let us now look into the usage of the `body-parser` npm package
+
+in app.js
+we do this
+```
+  //we require the module using 
+  var bodyParser =  require('body-parser');
+
+ 
+  // create application/json parser
+  var jsonParser = bodyParser.json()
+ 
+  // create application/x-www-form-urlencoded parser
+  var urlencodedParser = bodyParser.urlencoded({ extended: false })
+ 
+  // POST /login gets urlencoded bodies
+  app.post('/login', urlencodedParser, function (req, res) {
+    res.send('welcome, ' + req.body.username)
+  })
+
+```

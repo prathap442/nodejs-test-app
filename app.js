@@ -1,6 +1,12 @@
 var express = require('express');
 var app = express();
 var port = process.env.port || 3000;
+//we require the module using 
+var bodyParser =  require('body-parser');
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 app.listen(port);
 
 app.set('view engine','ejs')
@@ -23,3 +29,9 @@ app.get('/books/:id',function(req,res){
   res.send(`You have needed the book with the id of the ${req.params.id}`);
   console.log(req.params);
 })
+
+
+  // POST /login gets urlencoded bodies
+  app.post('/person', urlencodedParser, function (req, res) {
+    res.send('welcome, ' + req.body.fname)
+  })
