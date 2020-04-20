@@ -3,6 +3,7 @@ var app = express();
 var port = process.env.port || 3000;
 app.listen(port);
 
+app.set('view engine','ejs')
 app.use('/',function(req, res, next){
   console.log(req.params);
   console.log("entred the Middle ware");
@@ -10,7 +11,8 @@ app.use('/',function(req, res, next){
 })
 
 app.get('/',function(req,res){
-  res.send("<html> <head><title> The Nodejs Title </title></head> <body><h1> Hello World</h1> </body></html>");  
+  console.log("rendering the middleware template");
+  res.render('person',{ NAME: "chota bhai" })
 })
 
 app.get('/api',function(req,res){

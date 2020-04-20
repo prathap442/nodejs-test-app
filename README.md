@@ -96,3 +96,12 @@ The site provides the reference for a better routing guide
 Middleware?
   - Something that sits between two layers of the request and the response being sent to the front end and then here the middleware helps in calculating the time taken for the request to get completed .
 
+Ejs can be found at 
+> ejs.com
+```
+  $ npm install ejs --save
+```
+Now after installing the ejs now we want to set the view engine 
+```
+$ app.set('view engine','ejs')
+```
